@@ -1,14 +1,18 @@
+:root {
+    --accent: #00ff00;
+}
+
 * {box-sizing: border-box;}
 
 body {
     margin: 0;
     background: black;
     font-family: monospace;
-    color: green;
+    color: var(--accent);
 
 }
 a {
-   color: green;
+   color: var(--accent);
    font-size: 15px;
    text-decoration: none;
 }
@@ -18,7 +22,7 @@ ul {
     padding: 0;
 }
 li a:hover {
-    background: green;
+    background: var(--accent);
     color: black;
 }
 
@@ -42,7 +46,7 @@ nav {
     left: 0;
     width: 200px;
     bottom: 50px;
-    border: 1px solid green;
+    border: 1px solid var(--accent);
 }
 
 
@@ -51,7 +55,7 @@ nav li a {
     display: block;
     padding: 8px 16px;
     
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid var(--accent);
 }
 
 main {
@@ -59,8 +63,8 @@ main {
     margin-top: 80px;
     padding-left: 10px;
     height: calc(100vh - 130px);
-    border-top: 1px solid green;
-    border-bottom: 1px solid green;
+    border-top: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
     overflow-y: auto;
 }
 
@@ -70,10 +74,18 @@ main h1 {
 }
 main li a {
     display: block;
-    color: green;
+    color: var(--accent);
     text-decoration: none;
-    border: 1px solid green;
+    border: 1px solid var(--accent);
     padding: 10px;
+}
+#colorPicker {
+    border: none;
+    outline: none;
+    padding: 0;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
 }
 
 
