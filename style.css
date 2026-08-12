@@ -45,6 +45,14 @@ header h1 {
     font-weight: 100;
     padding: 0 10px;
 }
+
+.ascii-name {
+    margin: 0;
+    color: var(--accent);
+    padding: 0 10px;
+    font-weight: 300;
+}
+
 header label {
     font-size: 30px;
 
@@ -60,21 +68,40 @@ nav {
     position: fixed;
     top: 80px;
     left: 0;
-    width: 200px;
+    width: 250px;
     bottom: 50px;
     border: 1px solid var(--accent);
 }
 
-nav li a {
-    
+nav li a , .contact {
+    font-size: 20px;
     display: block;
     padding: 8px 16px;
-    
     border-bottom: 1px solid var(--accent);
 }
+.contact {
+    border-bottom: none;
+}
 
+.contactInfo li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 5px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--accent);
+}
+.emailIcon {
+    width: 30px;
+    height: 30px;
+    color: var(--accent);
+}
+.emailContact span {
+    margin:0;
+    line-height: 1;
+}
 main {
-    margin-left: 200px;
+    margin-left: 250px;
     margin-top: 80px;
     padding-left: 20px;
     height: calc(100vh - 130px);
