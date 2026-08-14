@@ -7,7 +7,6 @@ body {
     background: black;
     font-family: monospace;
     color: var(--accent);
-
 }
 
 a {
@@ -61,9 +60,11 @@ header label {
     gap: 10px;
     padding-right: 20px;
 }
+
 label span {
     align-items: center;
 }
+
 nav {
     position: fixed;
     top: 80px;
@@ -91,15 +92,18 @@ nav li a , .contact {
     padding-bottom: 8px;
     border-bottom: 1px solid var(--accent);
 }
+
 .emailIcon {
     width: 30px;
     height: 30px;
     color: var(--accent);
 }
+
 .emailContact span {
     margin:0;
     line-height: 1;
 }
+
 main {
     margin-left: 250px;
     margin-top: 80px;
@@ -116,13 +120,35 @@ main h1 {
     font-size: 30px;
 }
 
-main li a {
+main li {
     display: block;
     color: var(--accent);
     text-decoration: none;
     border: 1px solid var(--accent);
     padding: 10px;
+    margin-bottom: 20px;
 }
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.tag {
+    display: inline-block;
+    border: 1px solid var(--accent);
+    padding: 3px 8px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.tag:hover a {
+    background: var(--accent);
+    color: black;
+}
+
 
 footer {
     position: fixed;
@@ -146,6 +172,7 @@ footer {
     height: 50px;
     align-items: center;
 }
+''
 #colorPicker::-moz-color-swatch {
     border: none;
     border-radius: 50%;
