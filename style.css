@@ -209,12 +209,13 @@ footer {
     color: var(--accent);
 }
 
-.project:hover {
+.project:hover,
+.project:hover a {
     background: var(--accent);
     color: black;
 }
-
-.project:hover a {
+.project:hover .tag {
+    border-color: black;
     color: black;
 }
 .organizations a {
