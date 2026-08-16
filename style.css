@@ -170,14 +170,14 @@ footer {
     height: 50px;
     padding-left: 10px;
 }
-.hobby a {
+.organizations a {
     text-decoration: underline;
     padding: 2px 4px;
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
 }
 
-.hobby a:hover {
+.organizations a:hover {
     display: inline;
     background: var(--accent);
     color: black;
