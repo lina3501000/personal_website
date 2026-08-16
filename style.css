@@ -59,7 +59,10 @@ header label {
     gap: 10px;
     padding-right: 20px;
 }
-
+header a:hover {
+    color: var(--accent);
+    background: black;
+}
 label span {
     align-items: center;
 }
@@ -79,6 +82,7 @@ nav li a , .contact {
     padding: 8px 16px;
     border-bottom: 1px solid var(--accent);
 }
+
 
 .contact {
     border-bottom: none;
@@ -117,6 +121,7 @@ nav li a , .contact {
 
 main {
     margin-left: 250px;
+    margin-right: 5px;
     margin-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
@@ -229,6 +234,16 @@ footer {
     display: inline;
     background: var(--accent);
     color: black;
+}
+
+body.noNav nav {
+    display: none;
+}
+
+body.noNav main {
+    margin-left: 0;
+    border-left:1px solid var(--accent);
+    margin-left: 5px;
 }
 #colorPicker {
     border: none;
