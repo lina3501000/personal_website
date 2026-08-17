@@ -66,6 +66,27 @@ header a:hover {
 label span {
     align-items: center;
 }
+.statusMessage {
+    border: 2px solid var(--accent);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    outline: 2px dotted var(--accent);
+    outline-offset: 5px;
+}
+.statusMessage p {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.statusMessage h2 {
+    font-size: 20px;
+    font-weight: 100;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
 
 nav {
     position: fixed;
