@@ -153,6 +153,8 @@ main {
     border-bottom: 1px solid var(--accent);
     border-right: 1px solid var(--accent);
     overflow-y: auto;
+
+    width: calc(100% - 255px);
 }
 
 main h1 {
@@ -285,4 +287,126 @@ body.noNav main {
 #colorPicker::-moz-color-swatch {
     border: none;
     border-radius: 50%;
+}
+body.noNav main {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: calc(100% - 10px);
+    border-left: 1px solid var(--accent);
+}
+
+@media (max-width: 600px) {
+
+    header {
+        height: 70px;
+        padding-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header label {
+        padding-right: 10px;
+    }
+    #colorPicker {
+        width: 40px;
+        height: 40px;
+    }
+
+    nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--accent);
+    }
+
+    nav li a,
+    .contact {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    main {
+        margin: 0;
+        padding: 15px;
+        width: 100%;
+        height: calc(100vh - 120px);
+        border-left: 1px solid var(--accent);
+        border-right: 1px solid var(--accent);
+    }
+
+    footer {
+        height: 50px;
+    }
+}
+@media (max-width: 600px) {
+
+    header {
+        position: static;
+        height: auto;
+        min-height: 70px;
+    }
+
+    nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-bottom:none;
+    }
+
+    main {
+        margin: 0;
+        height: auto;
+        overflow-y: visible;
+        border-right: 1px solid var(--accent);
+    }
+    footer {
+        position: static;
+        height: auto;
+        min-height: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header label {
+        padding-right: 0;
+    }
+    .ascii-name {
+    font-size: clamp(8px, 3vw, 45px);
+}
+html, body {
+    overflow-x: hidden;
+}
+main {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+main {
+        width: 100%;
+        margin: 0;
+    }
+    main {
+    height: auto;
+    overflow-y: visible;
+}
+
+}
+
+
+@media (max-width: 450px) {
+    header label {
+        padding-right: 10px;
+        font-size: 25px;
+    }
+    #colorPicker {
+        width: 30px;
+        height: 30px;
+    }
 }
