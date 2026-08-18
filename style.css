@@ -294,6 +294,21 @@ body.noNav main {
     width: calc(100% - 10px);
     border-left: 1px solid var(--accent);
 }
+.pageTitle {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.backButton {
+    font-size:50px;
+    padding: 2px 8px;
+}
+
+.backButton:hover {
+    color: var(--accent);
+    background: black;
+}
 
 @media (max-width: 600px) {
 
