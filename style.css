@@ -2,13 +2,6 @@
 
 * {box-sizing: border-box;}
 
-body {
-    margin: 0;
-    background: black;
-    font-family: monospace;
-    color: var(--accent);
-}
-
 a {
    color: var(--accent);
    
@@ -26,6 +19,25 @@ ul {
     padding: 0;
 }
 
+label span {
+    align-items: center;
+}
+
+nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 250px;
+    bottom: 50px;
+    border: 1px solid var(--accent);
+}
+
+body {
+    margin: 0;
+    background: black;
+    font-family: monospace;
+    color: var(--accent);
+}
 header {
     position: fixed;
     top: 0;
@@ -63,9 +75,7 @@ header a:hover {
     color: var(--accent);
     background: black;
 }
-label span {
-    align-items: center;
-}
+
 .statusMessage {
     border: 2px solid var(--accent);
     padding-left: 10px;
@@ -90,14 +100,7 @@ label span {
     margin-top: 5px;
 }
 
-nav {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 250px;
-    bottom: 50px;
-    border: 1px solid var(--accent);
-}
+
 
 nav li a , .contact {
     font-size: 20px;
@@ -311,18 +314,27 @@ body.noNav main {
 }
 
 @media (max-width: 600px) {
-
+    html, body {
+        overflow-x: hidden;
+    }
     header {
         height: 70px;
+        min-height: 70px;
         padding-bottom: 10px;
+        position: static;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
     }
-
     header h1 {
         font-size: 30px;
     }
-
     header label {
         padding-right: 10px;
+        padding-right: 0;
+    }
+    .ascii-name {
+        font-size: clamp(8px, 3vw, 45px);
     }
     #colorPicker {
         width: 40px;
@@ -330,12 +342,14 @@ body.noNav main {
     }
 
     nav {
+        width: 100%;
+        border: 1px solid var(--accent);
+        border-bottom:none;
         position: static;
         width: 100%;
         height: auto;
-        border: 1px solid var(--accent);
+        
     }
-
     nav li a,
     .contact {
         font-size: 18px;
@@ -347,71 +361,20 @@ body.noNav main {
         padding: 15px;
         width: 100%;
         height: calc(100vh - 120px);
+        height: auto;
         border-left: 1px solid var(--accent);
         border-right: 1px solid var(--accent);
+        overflow-x: hidden;
+        overflow-y: auto;
+        overflow-y: visible;
     }
 
     footer {
         height: 50px;
-    }
-}
-@media (max-width: 600px) {
-
-    header {
-        position: static;
-        height: auto;
-        min-height: 70px;
-    }
-
-    nav {
-        position: static;
-        width: 100%;
-        height: auto;
-        border-bottom:none;
-    }
-
-    main {
-        margin: 0;
-        height: auto;
-        overflow-y: visible;
-        border-right: 1px solid var(--accent);
-    }
-    footer {
         position: static;
         height: auto;
         min-height: 50px;
     }
-}
-
-@media (max-width: 600px) {
-    header {
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header label {
-        padding-right: 0;
-    }
-    .ascii-name {
-    font-size: clamp(8px, 3vw, 45px);
-}
-html, body {
-    overflow-x: hidden;
-}
-main {
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-main {
-        width: 100%;
-        margin: 0;
-    }
-    main {
-    height: auto;
-    overflow-y: visible;
-}
-
 }
 
 
