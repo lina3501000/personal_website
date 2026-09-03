@@ -1,357 +1,392 @@
-:root {--accent: #00ff00;}
+:root {
+  --accent: #00ff00;
+}
 
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 a {
-   color: var(--accent);
-   
-   text-decoration: none;
+  color: var(--accent);
+  text-decoration: none;
 }
 
 a:hover {
-    background: var(--accent);
-    color: black;
+  background: var(--accent);
+  color: black;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 label span {
-    align-items: center;
+  align-items: center;
 }
 
 body {
-    margin: 0;
-    background: black;
-    font-family: monospace;
-    color: var(--accent);
+  margin: 0;
+  background: black;
+  font-family: monospace;
+  color: var(--accent);
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    padding-left: 0 30px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding-left: 0 30px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 header h1 {
-    margin:0;
-    font-size: 45px;
-    font-weight: 100;
-    padding: 0 10px;
+  margin: 0;
+  font-size: 45px;
+  font-weight: 100;
+  padding: 0 10px;
 }
+
 .ascii-name {
-    margin: 0;
-    color: var(--accent);
-    padding: 0 10px;
-    font-weight: 300;
+  margin: 0;
+  color: var(--accent);
+  padding: 0 10px;
+  font-weight: 300;
 }
+
 header label {
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-right: 20px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 20px;
 }
+
 header a:hover {
-    color: var(--accent);
-    background: black;
+  color: var(--accent);
+  background: black;
 }
+
 #colorPicker {
-    border: none;
-    outline: none;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
-    border-radius: 50%;
-    cursor: pointer;
-    appearance: none;
-    width: 50px;
-    height: 50px;
-    align-items: center;
+  border: none;
+  outline: none;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 50%;
+  cursor: pointer;
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  align-items: center;
 }
+
 #colorPicker::-moz-color-swatch {
-    border: none;
-    border-radius: 50%;
+  border: none;
+  border-radius: 50%;
 }
 
 nav {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 250px;
-    bottom: 50px;
-    border: 1px solid var(--accent);
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 250px;
+  bottom: 50px;
+  border: 1px solid var(--accent);
 }
+
 nav li a , .contact {
-    font-size: 20px;
-    display: block;
-    padding: 8px 16px;
-    border-bottom: 1px solid var(--accent);
+  font-size: 20px;
+  display: block;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--accent);
 }
+
 .contact {
-    border-bottom: none;
+  border-bottom: none;
 }
+
 .contactInfo {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
+
 .emailContact {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-left: 5px;
-    padding-bottom: 8px;
-    border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 5px;
+  padding-bottom: 8px;
+  border-bottom: none;
 }
+
 .emailIcon {
-    width: 30px;
-    height: 30px;
-    color: var(--accent);
+  width: 30px;
+  height: 30px;
+  color: var(--accent);
 }
+
 .emailContact span {
-    margin:0;
-    line-height: 1;
+  margin: 0;
+  line-height: 1;
 }
+
 .github a {
-    font-size: 20px;
-    display: block;
-    padding: 8px 16px;
+  font-size: 20px;
+  display: block;
+  padding: 8px 16px;
 }
 
 main {
-    margin-left: 250px;
-    margin-right: 5px;
-    margin-top: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: calc(100vh - 130px);
-    border-top: 1px solid var(--accent);
-    border-bottom: 1px solid var(--accent);
-    border-right: 1px solid var(--accent);
-    overflow-y: auto;
+  margin-left: 250px;
+  margin-right: 5px;
+  margin-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: calc(100vh - 130px);
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  border-right: 1px solid var(--accent);
+  overflow-y: auto;
+  width: calc(100% - 255px);
+}
 
-    width: calc(100% - 255px);
-}
 main h1 {
-    font-weight: 100;
-    font-size: 30px;
+  font-weight: 100;
+  font-size: 30px;
 }
+
 main li {
-    color: var(--accent);
-    text-decoration: none;
-    border: 1px solid var(--accent);
-    padding: 10px;
-    margin-bottom: 20px;
-    display: block;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  padding: 10px;
+  margin-bottom: 20px;
+  display: block;
 }
+
 main li a:hover {
-    display: block;
-    background: var(--accent);
-    color: black;
+  display: block;
+  background: var(--accent);
+  color: black;
 }
+
 .statusMessage {
-    border: 2px solid var(--accent);
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 20px;
-    display: inline-block;
-    outline: 2px dotted var(--accent);
-    outline-offset: 5px;
-    margin-bottom: 20px;
-    margin-left: 7px;
+  border: 2px solid var(--accent);
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px;
+  display: inline-block;
+  outline: 2px dotted var(--accent);
+  outline-offset: 5px;
+  margin-bottom: 20px;
+  margin-left: 7px;
 }
+
 .statusMessage p {
-    line-height: 1.5;
-    font-size: 16px;
+  line-height: 1.5;
+  font-size: 16px;
 }
+
 .statusMessage h2 {
-    font-size: 20px;
-    font-weight: 100;
-    padding-top: 10px;
-    margin-bottom: 10px;
-    margin-top: 5px;
+  font-size: 20px;
+  font-weight: 100;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
+
 .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
 }
+
 .tag {
-    display: inline-block;
-    border: 1px solid var(--accent);
-    padding: 3px 8px;
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 0.85rem;
+  display: inline-block;
+  border: 1px solid var(--accent);
+  padding: 3px 8px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
 }
+
 .projectTitle {
-    display: block;
-    color: var(--accent);
-    align-items: center;
-    gap: 15px;
+  display: block;
+  color: var(--accent);
+  align-items: center;
+  gap: 15px;
 }
+
 .project:hover,
 .project:hover a {
-    background: var(--accent);
-    color: black;
+  background: var(--accent);
+  color: black;
 }
+
 .project:hover .tag {
-    border-color: black;
-    color: black;
+  border-color: black;
+  color: black;
 }
+
 .pageTitle {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
+
 .backButton {
-    font-size:50px;
-    padding: 2px 8px;
+  font-size: 50px;
+  padding: 2px 8px;
 }
+
 .backButton:hover {
-    color: var(--accent);
-    background: black;
+  color: var(--accent);
+  background: black;
 }
+
 .imageGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-    max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  max-width: 1000px;
 }
+
 .imageViewer {
-    border: 1px solid var(--accent);
-    margin: 30px 0;
-    padding:5px;
-    max-width: 400px;
+  border: 1px solid var(--accent);
+  margin: 30px 0;
+  padding: 5px;
+  max-width: 400px;
 }
+
 .imageViewer img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
+
 .imageInfo {
-    border-top: 1px solid var(--accent);
-    margin-top: 10px;
-    padding-top: 8px;
-    font-family: monospace;
-    font-size: 14px;
+  border-top: 1px solid var(--accent);
+  margin-top: 10px;
+  padding-top: 8px;
+  font-family: monospace;
+  font-size: 14px;
 }
+
 .organizations a {
-    text-decoration: underline;
-    padding: 2px 4px;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 2px;
+  text-decoration: underline;
+  padding: 2px 4px;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
 }
+
 .organizations a:hover {
-    display: inline;
-    background: var(--accent);
-    color: black;
+  display: inline;
+  background: var(--accent);
+  color: black;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    padding-left: 10px;
-}
-
-@media (max-width: 600px) {
-    html, body {
-        overflow-x: hidden;
-    }
-    header {
-        height: 70px;
-        min-height: 70px;
-        padding-bottom: 10px;
-        position: static;
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-    }
-    header h1 {
-        font-size: 30px;
-    }
-    header label {
-        padding-right: 10px;
-        padding-right: 0;
-    }
-    .ascii-name {
-        font-size: clamp(8px, 3vw, 45px);
-    }
-    #colorPicker {
-        width: 40px;
-        height: 40px;
-    }
-
-    nav {
-        width: 100%;
-        border: 1px solid var(--accent);
-        border-bottom:none;
-        position: static;
-        width: 100%;
-        height: auto;
-        
-    }
-    nav li a,
-    .contact {
-        font-size: 18px;
-        padding: 8px 12px;
-    }
-
-    main {
-        margin: 0;
-        padding: 15px;
-        width: 100%;
-        height: calc(100vh - 120px);
-        height: auto;
-        border-left: 1px solid var(--accent);
-        border-right: 1px solid var(--accent);
-        overflow-x: hidden;
-        overflow-y: auto;
-        overflow-y: visible;
-    }
-    .imageGrid {
-        grid-template-columns: 1fr;
-    }
-    footer {
-        height: 50px;
-        position: static;
-        height: auto;
-        min-height: 50px;
-    }
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
 }
 
 body.noNav nav {
-    display: none;
+  display: none;
 }
+
 body.noNav main {
-    margin-left: 0;
-    border-left:1px solid var(--accent);
-    margin-left: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    width: calc(100% - 10px);
+  margin-left: 5px;
+  border-left: 1px solid var(--accent);
+  margin-right: 5px;
+  width: calc(100% - 10px);
+}
+
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  header {
+    height: auto;
+    min-height: 70px;
+    padding-bottom: 10px;
+    position: static;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 30px;
+  }
+  
+  header label {
+    padding-right: 0;
+  }
+  
+  .ascii-name {
+    font-size: clamp(8px, 3vw, 45px);
+  }
+  
+  #colorPicker {
+    width: 40px;
+    height: 40px;
+  }
+  
+  nav {
+    width: 100%;
+    border: 1px solid var(--accent);
+    border-bottom: none;
+    position: static;
+    height: auto;
+  }
+  
+  nav li a,
+      .contact {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+  
+  main {
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+    height: auto;
     border-left: 1px solid var(--accent);
+    border-right: 1px solid var(--accent);
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+  
+  .imageGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  footer {
+    height: auto;
+    position: static;
+    min-height: 50px;
+  }
 }
 
 @media (max-width: 450px) {
-    header label {
-        padding-right: 10px;
-        font-size: 25px;
-    }
-    #colorPicker {
-        width: 30px;
-        height: 30px;
-    }
+  header label {
+    padding-right: 10px;
+    font-size: 25px;
+  }
+  
+  #colorPicker {
+    width: 30px;
+    height: 30px;
+  }
 }
