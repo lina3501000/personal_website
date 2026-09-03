@@ -76,31 +76,24 @@ header a:hover {
     background: black;
 }
 
-.statusMessage {
-    border: 2px solid var(--accent);
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 20px;
-    display: inline-block;
-    outline: 2px dotted var(--accent);
-    outline-offset: 5px;
-    margin-bottom: 20px;
-    margin-left: 7px;
-}
-.statusMessage p {
-    line-height: 1.5;
-    font-size: 16px;
+#colorPicker {
+    border: none;
+    outline: none;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 50%;
+    cursor: pointer;
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    align-items: center;
 }
 
-.statusMessage h2 {
-    font-size: 20px;
-    font-weight: 100;
-    padding-top: 10px;
-    margin-bottom: 10px;
-    margin-top: 5px;
+#colorPicker::-moz-color-swatch {
+    border: none;
+    border-radius: 50%;
 }
-
-
 
 nav li a , .contact {
     font-size: 20px;
@@ -180,6 +173,29 @@ main li a:hover {
     color: black;
 }
 
+.statusMessage {
+    border: 2px solid var(--accent);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    outline: 2px dotted var(--accent);
+    outline-offset: 5px;
+    margin-bottom: 20px;
+    margin-left: 7px;
+}
+.statusMessage p {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.statusMessage h2 {
+    font-size: 20px;
+    font-weight: 100;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -195,16 +211,31 @@ main li a:hover {
     text-decoration: none;
     font-size: 0.85rem;
 }
-
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    padding-left: 10px;
+.projectTitle {
+    display: block;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.project:hover,
+.project:hover a {
+    background: var(--accent);
+    color: black;
+}
+.project:hover .tag {
+    border-color: black;
+    color: black;
+}
+.backButton {
+    font-size:50px;
+    padding: 2px 8px;
 }
 
+.backButton:hover {
+    color: var(--accent);
+    background: black;
+}
 .imageGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -231,26 +262,7 @@ footer {
     font-family: monospace;
     font-size: 14px;
 }
-@media (max-width: 600px) {
-    .imageGrid {
-        grid-template-columns: 1fr;
-    }
-}
 
-.projectTitle {
-    display: block;
-    color: var(--accent);
-}
-
-.project:hover,
-.project:hover a {
-    background: var(--accent);
-    color: black;
-}
-.project:hover .tag {
-    border-color: black;
-    color: black;
-}
 .organizations a {
     text-decoration: underline;
     padding: 2px 4px;
@@ -263,55 +275,18 @@ footer {
     background: var(--accent);
     color: black;
 }
-
-body.noNav nav {
-    display: none;
-}
-
-body.noNav main {
-    margin-left: 0;
-    border-left:1px solid var(--accent);
-    margin-left: 5px;
-}
-#colorPicker {
-    border: none;
-    outline: none;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
-    border-radius: 50%;
-    cursor: pointer;
-    appearance: none;
-    width: 50px;
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     height: 50px;
-    align-items: center;
+    padding-left: 10px;
 }
 
-#colorPicker::-moz-color-swatch {
-    border: none;
-    border-radius: 50%;
-}
-body.noNav main {
-    margin-left: 5px;
-    margin-right: 5px;
-    width: calc(100% - 10px);
-    border-left: 1px solid var(--accent);
-}
-.pageTitle {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
 
-.backButton {
-    font-size:50px;
-    padding: 2px 8px;
-}
 
-.backButton:hover {
-    color: var(--accent);
-    background: black;
-}
+
 
 @media (max-width: 600px) {
     html, body {
@@ -368,7 +343,9 @@ body.noNav main {
         overflow-y: auto;
         overflow-y: visible;
     }
-
+    .imageGrid {
+        grid-template-columns: 1fr;
+    }
     footer {
         height: 50px;
         position: static;
@@ -377,6 +354,19 @@ body.noNav main {
     }
 }
 
+body.noNav nav {
+    display: none;
+}
+
+body.noNav main {
+    margin-left: 0;
+    border-left:1px solid var(--accent);
+    margin-left: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: calc(100% - 10px);
+    border-left: 1px solid var(--accent);
+}
 
 @media (max-width: 450px) {
     header label {
